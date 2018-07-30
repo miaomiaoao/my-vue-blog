@@ -1,10 +1,15 @@
 <template>
     <div class="home" @click="init" @touchmove="init">
-        <h3>home</h3>
-        <router-link tag="a" to="about">about</router-link>
-        <router-link tag="a" to="blog">blog</router-link>
-        <router-link tag="a" to="category">category</router-link>
-        <canvas ref="canvas"></canvas>
+      <div class="wrapper">
+          <h1>一个人的小世界</h1>
+          <h3>努力学习前端的小菜鸟</h3>
+          <router-link tag="a" to="blog"> Blog</router-link>
+          <router-link tag="a" to="category">Category</router-link>
+          <router-link tag="a" to="about">About</router-link>
+      </div>
+      <canvas ref="canvas"></canvas>
+
+       
         <!--router-link的几种写法>
         1.<router-link to="home"></router-link>
         2.使用v-bind的js表达式
@@ -90,9 +95,33 @@ export default {
 .home {
   position: relative;
   a {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
+    display: block;
+    color: #999;
+    font-size: 14px;
+    line-height: 2em;
+    transition: color .2s ease;
+    &:hover {
+      color:rgb(55, 150, 240)
+    }
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 30%;
+    width: 300px;
+    margin: -150px 0 0 -150px;
+    text-align: center;
+  }
+
+  h3 {
+    color: #999;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: .12em;
+    margin-bottom: 30px;
+    left: 3px;
   }
 }
 </style>

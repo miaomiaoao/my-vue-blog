@@ -1,0 +1,26 @@
+@import '/variables';
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Open Sans',
+    'Helvetica Neue',
+    'Hiragino Sans GB',
+    'LiHei Pro',
+    Arial,
+    sans-serif;
+    color: $common_font_color;
+}
+
+a {
+    color: $common_font_color;
+    text-decoration: none;
+    &:hover {
+        color: $common_font_color;
+    }
+    &::visited {
+        color: $common_font_color;
+    }
+}
