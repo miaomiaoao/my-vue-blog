@@ -93,11 +93,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .home {
+  background: #ffffff;
   position: relative;
   a {
     display: block;
     color: #999;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 2em;
     transition: color .2s ease;
     &:hover {
