@@ -4,14 +4,15 @@ html, body {
     width: 100%;
     padding: 0;
     margin: 0 auto;
-    overflow: hidden;
-    font-family: 'Open Sans',
-    'Helvetica Neue',
-    'Hiragino Sans GB',
-    'LiHei Pro',
-    Arial,
-    sans-serif;
+    font-family: -apple-system-font,
+    "Helvetica Neue",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "sans-serif";
     color: $common_font_color;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 a {

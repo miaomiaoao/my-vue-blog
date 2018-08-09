@@ -95,6 +95,7 @@ export default {
 .home {
   background: #ffffff;
   position: relative;
+  overflow: hidden;
   a {
     display: block;
     color: #999;

@@ -2,25 +2,39 @@
     <div class="blog">
         <div class="header">
             <div class="header-desc">
-                <h5>分类</h5>
+                <h5>博客</h5>
                 <p>就只是随便写点东西</p>
                 <p>html&nbsp;&nbsp;css&nbsp;&nbsp;javascript&nbsp;&nbsp;vue</p>
             </div>
         </div>
         <div class="main">
-            <div class="article-item">
+            <div class="article-item article-item-odd">
+                <div class="articel-title" @click="goToArticle()"></div>
+                <div class="article-img"></div>
+            </div>
+            <div class="article-item article-item-even">
+                <div class="article-img"></div>
+                <div class="articel-title"></div>
+            </div>
+            <div class="article-item article-item-odd">
                 <div class="articel-title"></div>
                 <div class="article-img"></div>
             </div>
-            <div class="article-item"></div>
-            <div class="article-item"></div>
-            <div class="article-item"></div>
+            <div class="article-item article-item-even">
+                <div class="article-img"></div>
+                <div class="articel-title"></div>
+            </div>
         </div>
          <router-link tag="a" to="article">article</router-link>
     </div>
 </template>
 <script>
 export default {
+    methods: {
+        goToArticle() {
+            this.$router.push('article')
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
@@ -82,20 +96,21 @@ export default {
         .article-item {
             width: 100%;
             margin: 0;
+            display: flex;
             .articel-title {
                 width: 50%;
                 transition: background .5s ease;
                 padding-bottom: 25%;
                 display: inline-block;
-                float: left;
+                cursor: pointer;
                 &:hover {
                     background: rgba(110, 110, 110, 0.2);
                 }
             }
             .article-img {
                 width: 50%;
-                background: url('./../assets/image/bg1.jpg');
-                background-size: cover;
+                background: url('./../assets/image/articlecover15.jpg');
+                background-size: 100% 100%;
                 display: inline-block;
                 &::after {
                     content: '';
@@ -104,6 +119,16 @@ export default {
                     display: inline-block;
                 }
 
+            }
+        }
+        .article-item-odd {
+            .article-title {
+                float: left;
+            }
+        }
+        .article-item-even {
+            .articel-title {
+                float: right;
             }
         }
     }
