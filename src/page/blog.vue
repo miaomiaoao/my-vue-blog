@@ -25,7 +25,6 @@
                 <div class="articel-title"></div>
             </div>
         </div>
-         <router-link tag="a" to="article">article</router-link>
     </div>
 </template>
 <script>
@@ -39,8 +38,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .blog {
-    height: 100%;
     width: 100%;
+    background-image: url('./../assets/image/homepagebg.png');
+    background-repeat: repeat-y;
+    background-size: contain;
     .header {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(232, 232, 232, 0.7));
         position: relative;

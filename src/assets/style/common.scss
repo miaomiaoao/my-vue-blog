@@ -30,3 +30,63 @@ html, body, div, p, h1, h2, h3, h4, h5, h6 {
     padding:  0;
     margin: 0;
 }
+
+ blockquote {
+   box-sizing: border-box;
+   margin: 1.6em 0;
+   padding: 0 0 0 1.2em;
+   border-left: 0.4em solid #dddddd;
+   color: #888888;
+   min-height: 20px;
+ }
+
+ .markdown {
+    padding: .3rem 1rem 1.5rem;
+    h1, h2, h3, h4, h5, h6 {
+        color: #10a3ee;
+    }
+    h2 {
+        font-size: 1.45em;
+    }
+
+    h2, h3 {
+        line-height: 1.5em;
+        margin-top: 1.5em;
+        margin-bottom: 0.8em;
+    }
+    strong {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    p {
+        word-wrap: break-word;
+        overflow: hidden;
+        margin: 1.5em 0;
+        line-height: 1.7;
+    }
+
+    p img {
+        margin: 0 auto;
+    }
+
+    img {
+        display: block;
+        max-width: 95%;
+        margin: 0.8em auto 0.8em auto;
+        border-radius: 5px;
+    }
+
+    pre {
+        border: 1px solid #e6e6e6;
+        margin-top: 1.2em;
+        margin-bottom: 1.2em;
+        padding: 15px 10px;
+        display: block;
+        overflow: auto;
+        background: #f7f7f7;
+        font-size: 90%;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+ }

@@ -1,6 +1,5 @@
+import 'highlight.js/styles/googlecode.css'
 import marked from 'marked'
-import 'highlight.js/styles/monokai-sublime.css'
-
 marked.setOptions({
   render: new marked.Renderer(),
   gfm: true,

@@ -96,6 +96,7 @@ export default {
   background: #ffffff;
   position: relative;
   overflow: hidden;
+  height: 100%;
   a {
     display: block;
     color: #999;

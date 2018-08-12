@@ -12,8 +12,6 @@ export default {
 <style lang="scss" scoped>
 #app {
   width: 100%;
-  background-image: url('./assets/image/homepagebg.png');
-  background-repeat: repeat-y;
-  background-size: contain;
+  height: 100%;
 }
 </style>
