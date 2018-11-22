@@ -16,6 +16,16 @@ export default {
     methods: {
         openMenu() {
             this.isMenuNavShow = !this.isMenuNavShow
+
+
+            var name = 'a';
+            var obj = {
+                name: 'b',
+                getName: function() {
+                    return this.name;
+                }
+            }
+
         }
     }
 };
