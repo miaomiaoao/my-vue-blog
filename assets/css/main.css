@@ -31,6 +31,9 @@ a, a:hover, a:focus, a:visited
   width: 243px;
   height: 218px;
 }
+#__nuxt, #__layout {
+  height: 100%;
+}
 
 .page-enter-active, .page-leave-active
 {

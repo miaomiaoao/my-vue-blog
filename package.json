@@ -12,10 +12,15 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "cross-env": "^5.0.1",
     "css-loader": "^1.0.1",
     "element-ui": "^2.4.11",
     "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "mavon-editor": "^2.6.17",
+    "mongoose": "^5.3.15",
     "node-sass": "^4.10.0",
     "nuxt": "^1.4.2",
     "sass-loader": "^7.1.0",

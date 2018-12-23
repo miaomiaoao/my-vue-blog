@@ -19,7 +19,8 @@ module.exports = {
   css: [
     '~assets/css/main.css',
     '~assets/icon/iconfont.css',
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'mavon-editor/dist/css/index.css'
   ],
   /*
   ** Customize the progress-bar color
@@ -30,7 +31,8 @@ module.exports = {
    */
   build: {
     vendor: [
-      '~/plugins/element-ui'
+      '~/plugins/element-ui',
+      '~/plugins/mavon-editor'
     ],
     /*
      ** Run ESLINT on save
@@ -48,6 +50,10 @@ module.exports = {
   },
 
   plugins: [
-    '~/plugins/element-ui'
+    '~/plugins/element-ui',
+    {
+      src: '~/plugins/mavon-editor',
+      ssr: false
+    }
   ]
 }

@@ -1,7 +1,10 @@
 import Koa from 'koa'
 import { Nuxt, Builder } from 'nuxt'
+import mongoose from 'mongoose'
+import router from './interface/user'
+import bodyParser from 'koa-bodyparser'
 
-async function start () {
+async function start() {
   const app = new Koa()
   const host = process.env.HOST || '127.0.0.1'
   const port = process.env.PORT || 5000
@@ -12,13 +15,18 @@ async function start () {
 
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
+  // 数据库的连接
+  mongoose.connect('mongodb://localhost:27017/blog', {useNewUrlParser: true})
 
   // Build in development
   if (config.dev) {
     const builder = new Builder(nuxt)
     await builder.build()
   }
-
+  app.use(bodyParser({
+    extendTypes: ['json', 'form', 'text']
+  }))
+  app.use(router.routes()).use(router.allowedMethods())
   app.use(ctx => {
     ctx.status = 200
     ctx.respond = false // Mark request as handled for Koa

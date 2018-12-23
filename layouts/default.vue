@@ -1,21 +1,14 @@
 <template>
-  <!-- <div>
-    <nuxt/>
-    <my-footer/>
-  </div> -->
-  <el-container>
+  <el-container class="default">
       <el-header height="80px;" class="header">
-        Blog
+        Ying's Blog
       </el-header>
       <el-container>
         <el-aside width="200px" class="navbar">
-          <el-row :class="[isCollapse? 'collapse': 'collapse-open']">
-            <i class="iconfont" @click="onCollapseClick">&#xe62f;</i>
-          </el-row>
-          <el-menu :default-active="activeIndex" :collapse="isCollapse" class="el-menu-demo" @select="handleSelect">
+          <el-menu :default-active="activeIndex"  class="el-menu-demo" @select="handleSelect">
             <el-submenu index="1">
               <template slot="title">
-                <i class="el-icon-edit"></i>
+                <i class="iconfont icon-edit"></i>
                 <span>文章管理</span>
               </template>
               <el-menu-item index="1-1">文章发布</el-menu-item>
@@ -23,11 +16,11 @@
               <el-menu-item index="1-3">草稿箱</el-menu-item>
             </el-submenu>
             <el-menu-item index="2">
-              <i class="el-icon-star-off"></i>
+              <i class="iconfont icon-tag"></i>
               <span>标签管理</span>
               </el-menu-item>
             <el-menu-item index="3">
-              <i class="el-icon-menu"></i>
+              <i class="iconfont icon-user"></i>
               <span>个人中心</span>
               </el-menu-item>
           </el-menu>
@@ -45,8 +38,7 @@ export default {
   data() {
     return {
       activeIndex: '1',
-      activeIndex2: '1',
-      isCollapse: true
+      activeIndex2: '1'
     }
   },
   methods: {
@@ -61,20 +53,22 @@ export default {
       if (keyPath[1] === '1-3') {
         this.$router.push('tags')
       }
-    },
-    onCollapseClick() {
-      this.isCollapse = !this.isCollapse
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+
+.default, .el-menu {
+  height: 100%;
+}
 .header {
-  background-color: #409EFF;
+  background-color: #fff;
   font-size: 25px;
-  color: #fff;
+  color: #409EFF;
   line-height: 80px;
+  border-bottom: 1px solid #e6e6e6;
 }
 .collapse-open {
   transition: all 1s cubic-bezier(0.55, 0.09, 0.68, 0.53);
@@ -97,6 +91,10 @@ export default {
 }
 .el-submenu__title *, .el-menu-item{
   font-size: 18px;
+}
+
+.el-menu-item.is-active {
+    border-right: 1px solid #409EFF;
 }
 .navbar {
   margin-top: 20px;
