@@ -5,7 +5,7 @@
         <el-input v-model="title" placeholder="请输入文章标题"></el-input>
       </el-form-item>
       <el-form-item class="tag">
-        <el-input v-model="tag" placeholder="标签:如javascript,并用逗号分隔开" @focus="toggleTagPanel" @blur="toggleTagPanel"></el-input>
+        <el-input v-model="tag" placeholder="标签:如javascript,并用逗号分隔开(ps:最多可添加三个标签)" @focus="toggleTagPanel" @blur="toggleTagPanel"></el-input>
          <transition name="el-zoom-in-top">
           <dl class="tag-panel" v-show="isTagPanelShow">
           <dt class="arrow"></dt>
