@@ -2,6 +2,16 @@
   <el-container class="default">
       <el-header height="80px;" class="header">
         Ying's Blog
+        <div class="avatar" style="float: right;height: 100%">
+          <el-dropdown>
+             <img src="../assets/img/avatar.jpg" class="avatar">
+             <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item>设置</el-dropdown-item>
+                <el-dropdown-item>退出</el-dropdown-item>
+             </el-dropdown-menu>
+          </el-dropdown>
+          
+        </div>
       </el-header>
       <el-container>
         <el-aside width="200px" class="navbar">
@@ -9,20 +19,20 @@
             <el-submenu index="1">
               <template slot="title">
                 <i class="iconfont icon-edit"></i>
-                <span>文章管理</span>
+                <span>控制面板</span>
               </template>
+              <el-menu-item index="1-0">文章统计</el-menu-item>
               <el-menu-item index="1-1">文章发布</el-menu-item>
               <el-menu-item index="1-2">文章列表</el-menu-item>
-              <el-menu-item index="1-3">草稿箱</el-menu-item>
             </el-submenu>
             <el-menu-item index="2">
-              <i class="iconfont icon-tag"></i>
-              <span>标签管理</span>
-              </el-menu-item>
-            <el-menu-item index="3">
               <i class="iconfont icon-user"></i>
               <span>个人中心</span>
               </el-menu-item>
+            <el-menu-item index="3">
+              <i class="iconfont icon-user"></i>
+              <span>登录页面test</span>
+            </el-menu-item>
           </el-menu>
           <div class="line"></div>
         </el-aside>
@@ -44,14 +54,20 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath)
+      if (keyPath[1] === '1-0') {
+        this.$router.push('statistics')
+      }
       if (keyPath[1] === '1-1') {
         this.$router.push('write')
       }
       if (keyPath[1] === '1-2') {
         this.$router.push('articles')
       }
-      if (keyPath[1] === '1-3') {
-        this.$router.push('tags')
+      if (keyPath[0] === '2') {
+        this.$router.push('about')
+      }
+      if (keyPath[0] === '3') {
+        this.$router.push('login')
       }
     }
   }
@@ -98,5 +114,14 @@ export default {
 }
 .navbar {
   margin-top: 20px;
+}
+
+.avatar {
+  height: 60px;
+  width: 60px; 
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
 }
 </style>

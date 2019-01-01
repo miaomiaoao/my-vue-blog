@@ -84,7 +84,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: '首页',
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: 'Nuxt.js project' }],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
@@ -100,7 +100,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['~/plugins/element-ui', '~/plugins/mavon-editor'],
+    vendor: ['~/plugins/element-ui', '~/plugins/mavon-editor', '~/plugins/chart'],
     /*
      ** Run ESLINT on save
      */
@@ -117,6 +117,11 @@ module.exports = {
   },
 
   plugins: ['~/plugins/element-ui', {
+    src: '~/plugins/chart',
+    ssr: false
+  },
+  // '~/plugins/chart',
+  {
     src: '~/plugins/mavon-editor',
     ssr: false
   }]
